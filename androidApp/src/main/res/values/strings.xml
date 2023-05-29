@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="boarding_title">Welcome</string>
+    <string name="boarding_subtitle">Let’s contribute to helping others and saving the earth</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
