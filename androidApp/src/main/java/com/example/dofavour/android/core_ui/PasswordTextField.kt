@@ -25,7 +25,8 @@ fun PasswordTextField(
     passwordVisible: Boolean,
     showPassword: () -> Unit,
     error: ValidationError?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    color: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors()
 ) {
     OutlinedTextField(
         value = password,
@@ -64,6 +65,7 @@ fun PasswordTextField(
         visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         singleLine = true,
+        colors = color,
         modifier = modifier
             .fillMaxWidth()
     )

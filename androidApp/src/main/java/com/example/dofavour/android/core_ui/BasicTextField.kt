@@ -19,7 +19,8 @@ fun BasicTextField(
     onTextChange: (String) -> Unit,
     error: ValidationError?,
     modifier: Modifier = Modifier,
-    keyboardOptions: KeyboardOptions = KeyboardOptions.Default
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    color: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors()
 ) {
     OutlinedTextField(
         value = text,
@@ -43,6 +44,7 @@ fun BasicTextField(
         },
         keyboardOptions = keyboardOptions,
         singleLine = true,
+        colors = color,
         modifier = modifier
             .fillMaxWidth()
     )

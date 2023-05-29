@@ -38,7 +38,7 @@ struct BoardingScreen: View {
                     
                     HStack {
                         NavigationLink {
-                            
+                            LoginScreen()
                         } label: {
                             Text("Login")
                                 .font(Font.button)
