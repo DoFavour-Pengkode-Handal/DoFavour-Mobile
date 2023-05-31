@@ -10,12 +10,14 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.ajarin.core.utils.erros.ValidationError
+import com.example.dofavour.android.R
 import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 
 @Composable
@@ -33,7 +35,7 @@ fun PasswordTextField(
         onValueChange = { text ->
             onPasswordChange(text)
         },
-        label = { Text(text = "Password") },
+        label = { Text(text = stringResource(id = R.string.password)) },
         isError = error != null,
         trailingIcon = {
             val image = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
