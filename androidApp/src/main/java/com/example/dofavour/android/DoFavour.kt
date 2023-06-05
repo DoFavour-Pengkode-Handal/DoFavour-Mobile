@@ -15,6 +15,8 @@ import com.example.dofavour.android.core_ui.navigation.Route
 import com.example.dofavour.android.landing.presentation.boarding.BoardingScreen
 import com.example.dofavour.android.landing.presentation.login.AndroidLoginViewModel
 import com.example.dofavour.android.landing.presentation.login.LoginScreen
+import com.example.dofavour.android.landing.presentation.register.AndroidRegisterViewModel
+import com.example.dofavour.android.landing.presentation.register.RegisterScreen
 import com.example.dofavour.core.utils.UiEvent
 
 @Composable
@@ -42,7 +44,7 @@ fun DoFavour(
                         navController.navigate(Route.Login.name)
                     },
                     onSignUpClick = {
-
+                        navController.navigate(Route.Register.name)
                     }
                 )
             }
@@ -55,7 +57,7 @@ fun DoFavour(
                     viewModel.uiEvent.collect { event ->
                         when(event) {
                             is UiEvent.Success -> {
-
+                                appState.showSnackBar("Login Succeed")
                             }
                             is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
                             else -> Unit
@@ -69,7 +71,37 @@ fun DoFavour(
                     onBackClick = {
                         navController.navigateUp()
                     },
-                    onSignUp = {  }
+                    onSignUp = {
+                        navController.navigate(Route.Register.name)
+                    }
+                )
+            }
+
+            composable(Route.Register.name) {
+                val viewModel: AndroidRegisterViewModel = hiltViewModel()
+                val state by viewModel.state.collectAsState()
+
+                LaunchedEffect(key1 = true) {
+                    viewModel.uiEvent.collect { event ->
+                        when(event) {
+                            is UiEvent.Success -> {
+                                appState.showSnackBar("Register Succeed")
+                            }
+                            is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
+                            else -> Unit
+                        }
+                    }
+                }
+
+                RegisterScreen(
+                    state = state,
+                    onEvent = viewModel::onEvent,
+                    onBackClick = {
+                        navController.navigateUp()
+                    },
+                    onLogin = {
+                        navController.navigate(Route.Login.name)
+                    }
                 )
             }
         }

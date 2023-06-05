@@ -1,4 +1,4 @@
-package com.example.dofavour.android.landing.presentation.login
+package com.example.dofavour.android.landing.presentation.register
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -30,15 +30,15 @@ import com.example.dofavour.android.core_ui.PasswordTextField
 import com.example.dofavour.android.core_ui.TitleLessHeader
 import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 import com.example.dofavour.android.core_ui.theme.LocalGradient
-import com.example.dofavour.landing.presentation.login.LoginEvent
-import com.example.dofavour.landing.presentation.login.LoginState
+import com.example.dofavour.landing.presentation.register.RegisterEvent
+import com.example.dofavour.landing.presentation.register.RegisterState
 
 @Composable
-fun LoginScreen(
-    state: LoginState,
-    onEvent: (LoginEvent) -> Unit,
+fun RegisterScreen(
+    state: RegisterState,
+    onEvent: (RegisterEvent) -> Unit,
     onBackClick: () -> Unit,
-    onSignUp: () -> Unit
+    onLogin: () -> Unit
 ) {
     val localGradient = LocalGradient.current
 
@@ -61,7 +61,7 @@ fun LoginScreen(
             Text(
                 modifier = Modifier
                     .padding(horizontal = 24.dp),
-                text = stringResource(id = R.string.login),
+                text = stringResource(id = R.string.sign_up),
                 style = MaterialTheme.typography.h1.copy(
                     fontWeight = FontWeight.Bold
                 )
@@ -85,11 +85,29 @@ fun LoginScreen(
                 Spacer(modifier = Modifier.height(64.dp))
 
                 BasicTextField(
+                    label = stringResource(id = R.string.fullName),
+                    text = state.fullName,
+                    onTextChange = {
+                        onEvent(
+                            RegisterEvent.OnFulNameChange(it)
+                        )
+                    },
+                    error = state.fullNameError,
+                    color = TextFieldDefaults.outlinedTextFieldColors(
+                        backgroundColor = MaterialTheme.colors.onPrimary,
+                        cursorColor = MaterialTheme.colors.onBackground,
+                        focusedLabelColor = MaterialTheme.colors.onBackground
+                    )
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                BasicTextField(
                     label = stringResource(id = R.string.email),
                     text = state.email,
                     onTextChange = {
                         onEvent(
-                            LoginEvent.OnEmailChange(it)
+                            RegisterEvent.OnEmailChange(it)
                         )
                     },
                     error = state.emailError,
@@ -106,13 +124,13 @@ fun LoginScreen(
                     password = state.password,
                     onPasswordChange = {
                         onEvent(
-                            LoginEvent.OnPasswordChange(it)
+                            RegisterEvent.OnPasswordChange(it)
                         )
                     },
                     passwordVisible = state.isPasswordVisible,
                     showPassword = {
                         onEvent(
-                            LoginEvent.ToggleShowPassword
+                            RegisterEvent.ToggleShowPassword
                         )
                     },
                     error = state.passwordError,
@@ -123,39 +141,18 @@ fun LoginScreen(
                     )
                 )
 
-                Spacer(modifier = Modifier.height(4.dp))
-
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Spacer(modifier = Modifier.weight(1f))
-
-                    Text(
-                        modifier = Modifier
-                            .clickable {
-
-                            },
-                        text = stringResource(id = R.string.forgot_password),
-                        style = MaterialTheme.typography.caption.copy(
-                            fontWeight = FontWeight.Bold
-                        )
-                    )
-                }
-
                 Spacer(modifier = Modifier.height(32.dp))
 
                 DefaultButton(
                     modifier = Modifier,
-                    text = stringResource(id = R.string.login),
+                    text = stringResource(id = R.string.sign_up),
                     backgroundColor = MaterialTheme.colors.onBackground,
                     textModifier = Modifier
                         .fillMaxWidth(),
-                    isEnabled = state.loginButtonEnabled
+                    isEnabled = state.registerButtonEnabled
                 ) {
                     onEvent(
-                        LoginEvent.Login
+                        RegisterEvent.Register
                     )
                 }
 
@@ -167,20 +164,20 @@ fun LoginScreen(
                     horizontalArrangement = Arrangement.Center
                 ) {
                     Text(
-                        text = stringResource(id =R.string.dont_have_acc),
+                        text = stringResource(id = R.string.have_acc),
                         style = MaterialTheme.typography.body2
                     )
 
                     Spacer(modifier = Modifier.width(2.dp))
 
                     Text(
-                        text = stringResource(id = R.string.sign_up),
+                        text = stringResource(id = R.string.login),
                         style = MaterialTheme.typography.body2.copy(
                             fontWeight = FontWeight.Bold
                         ),
                         modifier = Modifier
                             .clickable {
-                                onSignUp()
+                                onLogin()
                             }
                     )
                 }
@@ -193,11 +190,11 @@ fun LoginScreen(
 @Composable
 private fun LoginScreenPreview() {
     DoFavourTheme {
-        LoginScreen(
-            state = LoginState(),
+        RegisterScreen(
+            state = RegisterState(),
             onEvent = {  },
             onBackClick = {  },
-            onSignUp = {  }
+            onLogin = {  }
         )
     }
 }
