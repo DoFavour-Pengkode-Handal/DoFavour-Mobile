@@ -2,6 +2,7 @@ package com.example.dofavour.android.landing.presentation.login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
@@ -25,9 +27,9 @@ import com.example.dofavour.android.R
 import com.example.dofavour.android.core_ui.BasicTextField
 import com.example.dofavour.android.core_ui.DefaultButton
 import com.example.dofavour.android.core_ui.PasswordTextField
+import com.example.dofavour.android.core_ui.TitleLessHeader
 import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 import com.example.dofavour.android.core_ui.theme.LocalGradient
-import com.example.dofavour.android.landing.presentation.login.components.LoginHeader
 import com.example.dofavour.landing.presentation.login.LoginEvent
 import com.example.dofavour.landing.presentation.login.LoginState
 
@@ -42,11 +44,10 @@ fun LoginScreen(
 
     Scaffold(
         topBar = {
-            LoginHeader(
+            TitleLessHeader(
                 modifier = Modifier
                     .padding(24.dp),
-                onBackClick = onBackClick,
-                onCreateAccountClick = onSignUp
+                onBackClick = onBackClick
             )
         }
     ) { paddingValues ->
@@ -154,6 +155,32 @@ fun LoginScreen(
                 ) {
                     onEvent(
                         LoginEvent.Login
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ) {
+                    Text(
+                        text = stringResource(id =R.string.dont_have_acc),
+                        style = MaterialTheme.typography.body2
+                    )
+
+                    Spacer(modifier = Modifier.width(2.dp))
+
+                    Text(
+                        text = stringResource(id = R.string.sign_up),
+                        style = MaterialTheme.typography.body2.copy(
+                            fontWeight = FontWeight.Bold
+                        ),
+                        modifier = Modifier
+                            .clickable {
+                                onSignUp()
+                            }
                     )
                 }
             }
