@@ -17,6 +17,11 @@
 		C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AA2A2505420099C7D1 /* LoginHeader.swift */; };
 		C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AD2A2505DB0099C7D1 /* DefaultTextField.swift */; };
 		C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */; };
+		C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */; };
+		C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */; };
+		C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */; };
+		C7BD4D412A2DAE0D00060DE0 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7BD4D402A2DAE0C00060DE0 /* Inter-Bold.ttf */; };
+		C7BD4D432A2DAF7400060DE0 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7BD4D422A2DAF7400060DE0 /* Inter-Black.ttf */; };
 		C7D283D82A22853600A9718A /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D283D72A22853600A9718A /* DependencyInjector.swift */; };
 		C7D283DD2A22858700A9718A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D283DC2A22858700A9718A /* Colors.swift */; };
 		C7D283DF2A2287DA00A9718A /* GradientSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D283DE2A2287DA00A9718A /* GradientSurface.swift */; };
@@ -54,6 +59,11 @@
 		C71907AA2A2505420099C7D1 /* LoginHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeader.swift; sourceTree = "<group>"; };
 		C71907AD2A2505DB0099C7D1 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosRegisterViewModel.swift; sourceTree = "<group>"; };
+		C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLessHeader.swift; sourceTree = "<group>"; };
+		C7BD4D402A2DAE0C00060DE0 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		C7BD4D422A2DAF7400060DE0 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
 		C7D283D72A22853600A9718A /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		C7D283DC2A22858700A9718A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C7D283DE2A2287DA00A9718A /* GradientSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSurface.swift; sourceTree = "<group>"; };
@@ -87,7 +97,6 @@
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
-				C7D283F22A2294B800A9718A /* Resources */,
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				7555FFB0242A642200829871 /* Frameworks */,
@@ -105,6 +114,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				C7BD4D442A2DB40500060DE0 /* Resources */,
 				C7D283E12A22884D00A9718A /* di */,
 				C7D283E02A22884200A9718A /* landing */,
 				C7D283D92A22855D00A9718A /* core_ui */,
@@ -150,6 +160,31 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		C7BD4D382A2DA7CF00060DE0 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				C7BD4D392A2DA7D400060DE0 /* components */,
+				C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */,
+				C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		C7BD4D392A2DA7D400060DE0 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		C7BD4D442A2DB40500060DE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C7D283F32A2294BE00A9718A /* fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C7D283D52A22850700A9718A /* core */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +208,7 @@
 				C7D283DA2A22856500A9718A /* navigation */,
 				C7D283E82A228F4800A9718A /* RoundedCorner.swift */,
 				C7D283EA2A22922D00A9718A /* RoundedGradientSurface.swift */,
+				C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */,
 			);
 			path = core_ui;
 			sourceTree = "<group>";
@@ -213,6 +249,7 @@
 		C7D283E22A22885100A9718A /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C7BD4D382A2DA7CF00060DE0 /* register */,
 				C71907AC2A2505CA0099C7D1 /* components */,
 				C7D283E42A22885B00A9718A /* boarding */,
 				C7D283E32A22885500A9718A /* login */,
@@ -238,17 +275,11 @@
 			path = boarding;
 			sourceTree = "<group>";
 		};
-		C7D283F22A2294B800A9718A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C7D283F32A2294BE00A9718A /* fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C7D283F32A2294BE00A9718A /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C7BD4D422A2DAF7400060DE0 /* Inter-Black.ttf */,
+				C7BD4D402A2DAE0C00060DE0 /* Inter-Bold.ttf */,
 				C7D283F42A2294C900A9718A /* Inter-Medium.ttf */,
 				C7D283F52A2294CA00A9718A /* Inter-Regular.ttf */,
 			);
@@ -316,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
+				C7BD4D432A2DAF7400060DE0 /* Inter-Black.ttf in Resources */,
+				C7BD4D412A2DAE0D00060DE0 /* Inter-Bold.ttf in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
 				C7D283F72A2294CA00A9718A /* Inter-Regular.ttf in Resources */,
 				C7D283F62A2294CA00A9718A /* Inter-Medium.ttf in Resources */,
@@ -350,9 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */,
 				C7D283E62A22886800A9718A /* BoardingScreen.swift in Sources */,
 				C71907A32A2504990099C7D1 /* IosLoginViewModel.swift in Sources */,
 				C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */,
+				C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */,
 				C7D283DF2A2287DA00A9718A /* GradientSurface.swift in Sources */,
 				C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */,
 				C7D283DD2A22858700A9718A /* Colors.swift in Sources */,
@@ -363,6 +398,7 @@
 				C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */,
 				C71907A82A2504E80099C7D1 /* LandingUseCasesModule.swift in Sources */,
 				C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */,
+				C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */,
 				C7D283EB2A22922D00A9718A /* RoundedGradientSurface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

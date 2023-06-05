@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct LoginScreen: View {
-    @StateObject private var viewModel = IosLoginViewModel()
+struct RegisterScreen: View {
+    @StateObject private var viewModel = IosRegisterViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -11,13 +11,46 @@ struct LoginScreen: View {
             Spacer()
                 .frame(height: 64)
             
-            Text("Login")
+            Text("Sign Up")
                 .font(Font.h1)
                 .padding()
             
             VStack {
                 Spacer()
                     .frame(height: 32)
+                
+                Group {
+                    DefaultTextField(
+                        title: "Full Name",
+                        text: Binding(
+                            get: {
+                                viewModel.state.fullName
+                            },
+                            set: {
+                                viewModel.onEvent(
+                                    event: .OnFullNameChange(name: $0)
+                                )
+                            }
+                        )
+                    )
+                    .background(
+                        Color(UIColor.systemBackground)
+                            .cornerRadius(8)
+                    )
+                    
+                    if let nameError = viewModel.state.fullNameError {
+                        HStack {
+                            Text(nameError.description())
+                                .font(.caption)
+                                .foregroundColor(.red)
+                            
+                            Spacer()
+                        }
+                    }
+                    
+                    Spacer()
+                        .frame(height: 16)
+                }
                 
                 Group {
                     DefaultTextField(
@@ -47,10 +80,10 @@ struct LoginScreen: View {
                             Spacer()
                         }
                     }
+                    
+                    Spacer()
+                        .frame(height: 16)
                 }
-                
-                Spacer()
-                    .frame(height: 16)
                 
                 Group {
                     PasswordTextField(
@@ -92,45 +125,33 @@ struct LoginScreen: View {
                     }
                 }
                 
-                HStack {
-                    Spacer()
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("Forgot Password")
-                            .font(Font.caption)
-                    }
-                    .buttonStyle(.plain)
-                }
-                
                 Spacer()
                     .frame(height: 32)
                 
                 Button {
                     viewModel.onEvent(
-                        event: .Login()
+                        event: .Register()
                     )
                 } label: {
-                    Text("Login")
+                    Text("Sign Up")
                         .font(Font.button)
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(Color.onBackground)
-                .disabled(!viewModel.state.loginButtonEnabled)
+                .disabled(!viewModel.state.registerButtonEnabled)
                 
                 Spacer()
                     .frame(height: 16)
                 
                 HStack {
-                    Text("Don’t have account yet?")
+                    Text("Already have an account?")
                         .font(Font.body1)
                     
                     NavigationLink {
-                        RegisterScreen()
+                        LoginScreen()
                     } label: {
-                        Text("Sign Up")
+                        Text("Log In")
                             .font(Font.bodyBold)
                     }
                     .buttonStyle(.plain)
@@ -151,8 +172,8 @@ struct LoginScreen: View {
     }
 }
 
-struct LoginScreen_Previews: PreviewProvider {
+struct RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        RegisterScreen()
     }
 }

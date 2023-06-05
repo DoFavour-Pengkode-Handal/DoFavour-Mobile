@@ -89,7 +89,7 @@ fun RegisterScreen(
                     text = state.fullName,
                     onTextChange = {
                         onEvent(
-                            RegisterEvent.OnFulNameChange(it)
+                            RegisterEvent.OnFullNameChange(it)
                         )
                     },
                     error = state.fullNameError,

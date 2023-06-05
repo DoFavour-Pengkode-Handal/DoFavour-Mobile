@@ -11,7 +11,7 @@ struct DefaultTextField: View {
         )
         .padding()
         .overlay(
-            Rectangle()
+            RoundedRectangle(cornerRadius: 8)
                 .strokeBorder(
                     .gray.opacity(0.2),
                     style: StrokeStyle(lineWidth: 2.0)

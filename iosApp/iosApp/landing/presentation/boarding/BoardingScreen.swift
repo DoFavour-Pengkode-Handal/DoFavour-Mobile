@@ -48,7 +48,7 @@ struct BoardingScreen: View {
                         .tint(Color.onBackground)
                         
                         NavigationLink {
-                            
+                            RegisterScreen()
                         } label: {
                             Text("Sign Up")
                                 .font(Font.button)

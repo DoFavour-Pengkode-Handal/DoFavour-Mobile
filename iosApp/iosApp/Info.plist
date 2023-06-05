@@ -4,8 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Resources/fonts/Inter-Regular.ttf</string>
-		<string>Resources/fonts/Inter-Medium.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Inter-Bold.ttf</string>
+		<string>Inter-Black.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

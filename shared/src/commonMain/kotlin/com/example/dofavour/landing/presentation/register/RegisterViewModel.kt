@@ -41,7 +41,7 @@ class RegisterViewModel(
                     )
                 }
             }
-            is RegisterEvent.OnFulNameChange -> {
+            is RegisterEvent.OnFullNameChange -> {
                 _state.value = state.value.copy(
                     fullName = event.name,
                     registerError = null
