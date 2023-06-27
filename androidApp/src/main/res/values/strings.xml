@@ -11,4 +11,10 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="dont_have_acc">Don’t have account yet?</string>
     <string name="have_acc">Already have an account?</string>
+    <string name="verify_otp_title">OTP Verification</string>
+    <string name="verify_otp_desc">Enter the OTP sent to</string>
+    <string name="verify_otp_button">Verify Now</string>
+    <string name="resend_otp_desc">Didn’t you receive the OTP ?</string>
+    <string name="resend_otp_button">Resend OTP</string>
+    <string name="resend_count">%1$s Seconds</string>
 </resources>

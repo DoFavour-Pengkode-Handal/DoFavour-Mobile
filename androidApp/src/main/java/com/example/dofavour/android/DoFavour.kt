@@ -9,14 +9,18 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import com.example.dofavour.android.core_ui.navigation.Route
 import com.example.dofavour.android.landing.presentation.boarding.BoardingScreen
 import com.example.dofavour.android.landing.presentation.login.AndroidLoginViewModel
 import com.example.dofavour.android.landing.presentation.login.LoginScreen
 import com.example.dofavour.android.landing.presentation.register.AndroidRegisterViewModel
 import com.example.dofavour.android.landing.presentation.register.RegisterScreen
+import com.example.dofavour.android.landing.presentation.verify_otp.AndroidVerifyOtpViewModel
+import com.example.dofavour.android.landing.presentation.verify_otp.VerifyOtpScreen
 import com.example.dofavour.core.utils.UiEvent
 
 @Composable
@@ -86,6 +90,7 @@ fun DoFavour(
                         when(event) {
                             is UiEvent.Success -> {
                                 appState.showSnackBar("Register Succeed")
+                                navController.navigate(Route.VerifyOtp.name + "/${state.email}")
                             }
                             is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
                             else -> Unit
@@ -103,6 +108,43 @@ fun DoFavour(
                         navController.navigate(Route.Login.name)
                     }
                 )
+            }
+
+            composable(
+                route = Route.VerifyOtp.name + "/{email}",
+                arguments = listOf(
+                    navArgument("email") {
+                        type = NavType.StringType
+                    }
+                )
+            ) { navBackStackEntry ->
+                val email = navBackStackEntry.arguments?.getString("email")
+
+                val viewModel: AndroidVerifyOtpViewModel = hiltViewModel()
+                val state by viewModel.state.collectAsState()
+
+                LaunchedEffect(key1 = true) {
+                    viewModel.uiEvent.collect { event ->
+                        when(event) {
+                            is UiEvent.Success -> {
+                                appState.showSnackBar("Verify Otp Succeed")
+                            }
+                            is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
+                            else -> Unit
+                        }
+                    }
+                }
+
+                email?.let {
+                    VerifyOtpScreen(
+                        email = email,
+                        state = state,
+                        onEvent = viewModel::onEvent,
+                        onBackClick = {
+                            navController.navigateUp()
+                        }
+                    )
+                }
             }
         }
     }

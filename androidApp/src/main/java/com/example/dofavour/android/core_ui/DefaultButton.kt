@@ -43,8 +43,9 @@ fun DefaultButton(
         modifier = modifier
             .background(
                 color = backgroundColor,
-                shape = RoundedCornerShape(8.dp)
-            )
+                shape = RoundedCornerShape(16.dp)
+            ),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Text(
             text = text,

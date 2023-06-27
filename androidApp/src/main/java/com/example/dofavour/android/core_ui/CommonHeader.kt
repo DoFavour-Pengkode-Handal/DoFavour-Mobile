@@ -1,18 +1,19 @@
 package com.example.dofavour.android.core_ui
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ChevronLeft
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 
@@ -22,9 +23,11 @@ fun CommonHeader(
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    TopAppBar(
-        modifier = modifier,
-        backgroundColor = Color.Transparent
+    Row(
+        modifier = modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.Start,
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
@@ -36,16 +39,18 @@ fun CommonHeader(
                     .align(Alignment.CenterStart)
             ) {
                 Icon(
-                    imageVector = Icons.Rounded.ChevronLeft,
+                    imageVector = Icons.Default.ArrowBack,
                     contentDescription = "Back"
                 )
             }
 
             Text(
-                text = title,
-                style = MaterialTheme.typography.h2,
                 modifier = Modifier
-                    .align(Alignment.Center)
+                    .align(Alignment.Center),
+                text = title,
+                style = MaterialTheme.typography.h4.copy(
+                    fontWeight = FontWeight.Bold
+                )
             )
         }
     }

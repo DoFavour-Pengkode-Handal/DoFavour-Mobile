@@ -1,6 +1,7 @@
 package com.example.dofavour.android.core_ui
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -9,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.ajarin.core.utils.erros.ValidationError
 import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 
@@ -46,7 +48,8 @@ fun BasicTextField(
         singleLine = true,
         colors = color,
         modifier = modifier
-            .fillMaxWidth()
+            .fillMaxWidth(),
+        shape = RoundedCornerShape(16.dp)
     )
 
     error?.let {

@@ -12,6 +12,7 @@ val Green60 = Color(Colors.Green60)
 val Green80 = Color(Colors.Green80)
 val Green100 = Color(Colors.Green100)
 val TextBlack = Color(Colors.TextBlack)
+val RedSecondary = Color(Colors.RedSecondary)
 val Grey = Color(Colors.Grey)
 val DarkGrey = Color(Colors.DarkGrey)
 val Linear40100 = Brush.linearGradient(
@@ -34,7 +35,8 @@ val lightColors = darkColors(
     onPrimary = Color.White,
     onBackground = TextBlack,
     surface = Color.White,
-    onSurface = TextBlack
+    onSurface = TextBlack,
+    secondary = RedSecondary
 )
 
 val darkColors = lightColors(
@@ -43,7 +45,8 @@ val darkColors = lightColors(
     onPrimary = Color.White,
     onBackground = Color.White,
     surface = DarkGrey,
-    onSurface = Color.White
+    onSurface = Color.White,
+    secondary = RedSecondary
 )
 
 val LightGradientPalette = GradientPalette(

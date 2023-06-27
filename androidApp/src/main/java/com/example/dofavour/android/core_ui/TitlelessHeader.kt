@@ -10,25 +10,37 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 
 @Composable
 fun TitleLessHeader(
     modifier: Modifier = Modifier,
     onBackClick: () -> Unit,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.Start,
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Row(
-            modifier = modifier
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.Start,
-            verticalAlignment = Alignment.CenterVertically
+        IconButton(
+            onClick = onBackClick
         ) {
-            IconButton(
-                onClick = onBackClick
-            ) {
-                Icon(
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Back"
-                )
-            }
+            Icon(
+                imageVector = Icons.Default.ArrowBack,
+                contentDescription = "Back"
+            )
         }
+    }
+}
+
+@Preview
+@Composable
+private fun TitleLessHeaderPreview() {
+    DoFavourTheme {
+        TitleLessHeader {
+
+        }
+    }
 }
