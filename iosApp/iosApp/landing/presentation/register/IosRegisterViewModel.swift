@@ -39,11 +39,6 @@ extension RegisterScreen {
             handle = viewModel.state.subscribe { state in
                 if let state = state {
                     self.state = state
-                    
-                    if state.registerSuccess {
-                        let userDefaults = UserDefaults.standard
-                        userDefaults.set(true, forKey: "isLogin")
-                    }
                 }
             }
         }

@@ -4,7 +4,7 @@ struct BoardingScreen: View {
     let radius = 16.0
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .center) {
                 Spacer()
                 
@@ -19,6 +19,9 @@ struct BoardingScreen: View {
                     Text("Welcome")
                         .font(Font.h1)
                         .foregroundColor(.onPrimary)
+                    
+                    Spacer()
+                        .frame(height: 32)
                     
                     HStack {
                         Text("Let’s contribute to helping others and saving the earth")

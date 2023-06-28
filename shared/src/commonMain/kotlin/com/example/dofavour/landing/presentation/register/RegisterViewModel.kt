@@ -108,6 +108,11 @@ class RegisterViewModel(
                     isPasswordVisible = !state.value.isPasswordVisible
                 )
             }
+            is RegisterEvent.UpdateRegisterResult -> {
+                _state.value = state.value.copy(
+                    registerSuccess = event.result
+                )
+            }
         }
     }
 

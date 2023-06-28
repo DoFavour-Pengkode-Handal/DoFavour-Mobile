@@ -17,6 +17,10 @@
 		C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AA2A2505420099C7D1 /* LoginHeader.swift */; };
 		C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AD2A2505DB0099C7D1 /* DefaultTextField.swift */; };
 		C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */; };
+		C73069AD2A4CA1730013EC5B /* OtpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73069AC2A4CA1730013EC5B /* OtpTextField.swift */; };
+		C73069AF2A4CBE720013EC5B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73069AE2A4CBE720013EC5B /* StringExtension.swift */; };
+		C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */; };
+		C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */; };
 		C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */; };
 		C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */; };
 		C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */; };
@@ -31,6 +35,7 @@
 		C7D283F62A2294CA00A9718A /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7D283F42A2294C900A9718A /* Inter-Medium.ttf */; };
 		C7D283F72A2294CA00A9718A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7D283F52A2294CA00A9718A /* Inter-Regular.ttf */; };
 		C7D283F92A22950600A9718A /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D283F82A22950600A9718A /* Typography.swift */; };
+		C7E60C912A4BED2D00C5AB96 /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E60C902A4BED2D00C5AB96 /* CommonHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +64,10 @@
 		C71907AA2A2505420099C7D1 /* LoginHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeader.swift; sourceTree = "<group>"; };
 		C71907AD2A2505DB0099C7D1 /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		C73069AC2A4CA1730013EC5B /* OtpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpTextField.swift; sourceTree = "<group>"; };
+		C73069AE2A4CBE720013EC5B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
+		C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosVerifyOtpViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosRegisterViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLessHeader.swift; sourceTree = "<group>"; };
@@ -73,6 +82,7 @@
 		C7D283F42A2294C900A9718A /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		C7D283F52A2294CA00A9718A /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		C7D283F82A22950600A9718A /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		C7E60C902A4BED2D00C5AB96 /* CommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +170,24 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		C7417F572A4B70AC002538C9 /* verify_otp */ = {
+			isa = PBXGroup;
+			children = (
+				C7417F5C2A4B70CE002538C9 /* components */,
+				C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */,
+				C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */,
+			);
+			path = verify_otp;
+			sourceTree = "<group>";
+		};
+		C7417F5C2A4B70CE002538C9 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				C73069AC2A4CA1730013EC5B /* OtpTextField.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		C7BD4D382A2DA7CF00060DE0 /* register */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D283D72A22853600A9718A /* DependencyInjector.swift */,
+				C73069AE2A4CBE720013EC5B /* StringExtension.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -209,6 +238,7 @@
 				C7D283E82A228F4800A9718A /* RoundedCorner.swift */,
 				C7D283EA2A22922D00A9718A /* RoundedGradientSurface.swift */,
 				C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */,
+				C7E60C902A4BED2D00C5AB96 /* CommonHeader.swift */,
 			);
 			path = core_ui;
 			sourceTree = "<group>";
@@ -249,6 +279,7 @@
 		C7D283E22A22885100A9718A /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C7417F572A4B70AC002538C9 /* verify_otp */,
 				C7BD4D382A2DA7CF00060DE0 /* register */,
 				C71907AC2A2505CA0099C7D1 /* components */,
 				C7D283E42A22885B00A9718A /* boarding */,
@@ -386,19 +417,24 @@
 				C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */,
 				C7D283E62A22886800A9718A /* BoardingScreen.swift in Sources */,
 				C71907A32A2504990099C7D1 /* IosLoginViewModel.swift in Sources */,
+				C7E60C912A4BED2D00C5AB96 /* CommonHeader.swift in Sources */,
 				C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */,
 				C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */,
 				C7D283DF2A2287DA00A9718A /* GradientSurface.swift in Sources */,
 				C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */,
 				C7D283DD2A22858700A9718A /* Colors.swift in Sources */,
+				C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */,
 				C7D283D82A22853600A9718A /* DependencyInjector.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				C7D283E92A228F4800A9718A /* RoundedCorner.swift in Sources */,
 				C7D283F92A22950600A9718A /* Typography.swift in Sources */,
 				C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */,
 				C71907A82A2504E80099C7D1 /* LandingUseCasesModule.swift in Sources */,
+				C73069AD2A4CA1730013EC5B /* OtpTextField.swift in Sources */,
 				C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */,
 				C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */,
+				C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */,
+				C73069AF2A4CBE720013EC5B /* StringExtension.swift in Sources */,
 				C7D283EB2A22922D00A9718A /* RoundedGradientSurface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,6 +33,10 @@ class VerifyOtpViewModel(
     fun onEvent(event: VerifyOtpEvent) {
         when(event) {
             is VerifyOtpEvent.OnOtpChange -> {
+                if (event.otp.length > 6) {
+                    return
+                }
+
                 _state.value = state.value.copy(
                     otp = event.otp,
                     verifyOtpError = null

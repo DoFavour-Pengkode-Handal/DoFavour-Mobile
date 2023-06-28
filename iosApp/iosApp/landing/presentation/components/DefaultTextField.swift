@@ -24,7 +24,7 @@ struct DefaultTextField_Previews: PreviewProvider {
     static var previews: some View {
         DefaultTextField(
             title: "Mobile No",
-            text: .constant("")
+            text: .constant("122")
         )
     }
 }

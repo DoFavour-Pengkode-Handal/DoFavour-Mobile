@@ -6,4 +6,5 @@ sealed class RegisterEvent {
     data class OnPasswordChange(val password: String): RegisterEvent()
     object ToggleShowPassword: RegisterEvent()
     object Register: RegisterEvent()
+    data class UpdateRegisterResult(val result: Boolean): RegisterEvent()
 }

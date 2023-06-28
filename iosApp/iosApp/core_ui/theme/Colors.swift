@@ -19,6 +19,7 @@ extension Color {
     static let green60 = Color(hex: colors.Green60)
     static let green80 = Color(hex: colors.Green80)
     static let green100 = Color(hex: colors.Green100)
+    static let redSecondary = Color(hex: colors.RedSecondary)
     static let textBlack = Color(hex: colors.TextBlack)
     static let grey = Color(hex: colors.Grey)
     static let darkGrey = Color(hex: colors.DarkGrey)
@@ -29,6 +30,7 @@ extension Color {
     static let onBackground = Color(light: .textBlack, dark: .white)
     static let surface = Color(light: .white, dark: .darkGrey)
     static let onSurface = Color(light: .textBlack, dark: .white)
+    static let secondaryColor = Color(light: .redSecondary, dark: .redSecondary)
 }
 
 private extension Color {

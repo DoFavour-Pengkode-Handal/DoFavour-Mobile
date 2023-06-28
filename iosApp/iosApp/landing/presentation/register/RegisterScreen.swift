@@ -169,6 +169,20 @@ struct RegisterScreen: View {
         .onDisappear {
             viewModel.dispose()
         }
+        .navigationDestination(
+            isPresented: Binding(
+                get: {
+                    viewModel.state.registerSuccess
+                },
+                set: {
+                    viewModel.onEvent(
+                        event: .UpdateRegisterResult(result: $0)
+                    )
+                }
+            )
+        ) {
+            VerifyOtpScreen(email: viewModel.state.email)
+        }
     }
 }
 
