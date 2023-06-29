@@ -86,6 +86,11 @@ class ResetPasswordViewModel(
                     isPasswordVisible = !state.value.isPasswordVisible
                 )
             }
+            is ResetPasswordEvent.UpdateResetResult -> {
+                _state.value = state.value.copy(
+                    resetSuccess = event.result
+                )
+            }
         }
     }
 }

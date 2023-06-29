@@ -95,8 +95,8 @@ struct LoginScreen: View {
                 HStack {
                     Spacer()
                     
-                    Button {
-                        
+                    NavigationLink {
+                        ResetPasswordScreen()
                     } label: {
                         Text("Forgot Password")
                             .font(Font.caption)

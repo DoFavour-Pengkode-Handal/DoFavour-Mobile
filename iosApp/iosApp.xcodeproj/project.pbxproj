@@ -19,6 +19,8 @@
 		C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */; };
 		C73069AD2A4CA1730013EC5B /* OtpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73069AC2A4CA1730013EC5B /* OtpTextField.swift */; };
 		C73069AF2A4CBE720013EC5B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73069AE2A4CBE720013EC5B /* StringExtension.swift */; };
+		C73F9C7F2A4DE01B00F1ED66 /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F9C7E2A4DE01B00F1ED66 /* ResetPasswordScreen.swift */; };
+		C73F9C812A4DE03900F1ED66 /* IosResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F9C802A4DE03900F1ED66 /* IosResetPasswordViewModel.swift */; };
 		C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */; };
 		C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */; };
 		C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */; };
@@ -66,6 +68,8 @@
 		C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		C73069AC2A4CA1730013EC5B /* OtpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpTextField.swift; sourceTree = "<group>"; };
 		C73069AE2A4CBE720013EC5B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C73F9C7E2A4DE01B00F1ED66 /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
+		C73F9C802A4DE03900F1ED66 /* IosResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
 		C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosVerifyOtpViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 				C71907AF2A2505F10099C7D1 /* PasswordTextField.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		C73F9C7D2A4DDB9D00F1ED66 /* reset_password */ = {
+			isa = PBXGroup;
+			children = (
+				C73F9C7E2A4DE01B00F1ED66 /* ResetPasswordScreen.swift */,
+				C73F9C802A4DE03900F1ED66 /* IosResetPasswordViewModel.swift */,
+			);
+			path = reset_password;
 			sourceTree = "<group>";
 		};
 		C7417F572A4B70AC002538C9 /* verify_otp */ = {
@@ -279,6 +292,7 @@
 		C7D283E22A22885100A9718A /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C73F9C7D2A4DDB9D00F1ED66 /* reset_password */,
 				C7417F572A4B70AC002538C9 /* verify_otp */,
 				C7BD4D382A2DA7CF00060DE0 /* register */,
 				C71907AC2A2505CA0099C7D1 /* components */,
@@ -424,6 +438,7 @@
 				C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */,
 				C7D283DD2A22858700A9718A /* Colors.swift in Sources */,
 				C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */,
+				C73F9C812A4DE03900F1ED66 /* IosResetPasswordViewModel.swift in Sources */,
 				C7D283D82A22853600A9718A /* DependencyInjector.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				C7D283E92A228F4800A9718A /* RoundedCorner.swift in Sources */,
@@ -431,6 +446,7 @@
 				C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */,
 				C71907A82A2504E80099C7D1 /* LandingUseCasesModule.swift in Sources */,
 				C73069AD2A4CA1730013EC5B /* OtpTextField.swift in Sources */,
+				C73F9C7F2A4DE01B00F1ED66 /* ResetPasswordScreen.swift in Sources */,
 				C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */,
 				C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */,
 				C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */,

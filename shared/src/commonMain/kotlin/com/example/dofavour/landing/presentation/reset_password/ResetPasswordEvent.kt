@@ -5,4 +5,5 @@ sealed class ResetPasswordEvent {
     data class OnPasswordChange(val password: String): ResetPasswordEvent()
     object ToggleShowPassword: ResetPasswordEvent()
     object Reset: ResetPasswordEvent()
+    data class UpdateResetResult(val result: Boolean): ResetPasswordEvent()
 }
