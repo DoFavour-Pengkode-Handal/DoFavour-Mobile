@@ -19,6 +19,8 @@ import com.example.dofavour.android.landing.presentation.login.AndroidLoginViewM
 import com.example.dofavour.android.landing.presentation.login.LoginScreen
 import com.example.dofavour.android.landing.presentation.register.AndroidRegisterViewModel
 import com.example.dofavour.android.landing.presentation.register.RegisterScreen
+import com.example.dofavour.android.landing.presentation.reset_password.AndroidResetPasswordViewModel
+import com.example.dofavour.android.landing.presentation.reset_password.ResetPasswordScreen
 import com.example.dofavour.android.landing.presentation.verify_otp.AndroidVerifyOtpViewModel
 import com.example.dofavour.android.landing.presentation.verify_otp.VerifyOtpScreen
 import com.example.dofavour.core.utils.UiEvent
@@ -77,6 +79,9 @@ fun DoFavour(
                     },
                     onSignUp = {
                         navController.navigate(Route.Register.name)
+                    },
+                    onForgotPassword = {
+                        navController.navigate(Route.ResetPassword.name)
                     }
                 )
             }
@@ -145,6 +150,31 @@ fun DoFavour(
                         }
                     )
                 }
+            }
+
+            composable(Route.ResetPassword.name) {
+                val viewModel: AndroidResetPasswordViewModel = hiltViewModel()
+                val state by viewModel.state.collectAsState()
+
+                LaunchedEffect(key1 = true) {
+                    viewModel.uiEvent.collect { event ->
+                        when(event) {
+                            is UiEvent.Success -> {
+                                navController.navigate(Route.VerifyOtp.name + "/${state.email}")
+                            }
+                            is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
+                            else -> Unit
+                        }
+                    }
+                }
+
+                ResetPasswordScreen(
+                    state = state,
+                    onEvent = viewModel::onEvent,
+                    onBackClick = {
+                        navController.navigateUp()
+                    }
+                )
             }
         }
     }

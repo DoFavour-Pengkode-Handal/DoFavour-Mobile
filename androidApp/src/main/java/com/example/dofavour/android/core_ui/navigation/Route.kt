@@ -5,5 +5,6 @@ enum class Route {
     Boarding,
     Login,
     Register,
-    VerifyOtp
+    VerifyOtp,
+    ResetPassword
 }

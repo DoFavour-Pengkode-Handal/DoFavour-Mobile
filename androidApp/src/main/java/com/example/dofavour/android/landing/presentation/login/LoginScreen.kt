@@ -38,7 +38,8 @@ fun LoginScreen(
     state: LoginState,
     onEvent: (LoginEvent) -> Unit,
     onBackClick: () -> Unit,
-    onSignUp: () -> Unit
+    onSignUp: () -> Unit,
+    onForgotPassword: () -> Unit
 ) {
     val localGradient = LocalGradient.current
 
@@ -135,7 +136,7 @@ fun LoginScreen(
                     Text(
                         modifier = Modifier
                             .clickable {
-
+                                onForgotPassword()
                             },
                         text = stringResource(id = R.string.forgot_password),
                         style = MaterialTheme.typography.caption.copy(
@@ -197,7 +198,8 @@ private fun LoginScreenPreview() {
             state = LoginState(),
             onEvent = {  },
             onBackClick = {  },
-            onSignUp = {  }
+            onSignUp = {  },
+            onForgotPassword = {  }
         )
     }
 }

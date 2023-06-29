@@ -24,12 +24,13 @@ import com.example.dofavour.android.core_ui.theme.DoFavourTheme
 
 @Composable
 fun PasswordTextField(
+    modifier: Modifier = Modifier,
+    title: String? = null,
     password: String,
     onPasswordChange: (String) -> Unit,
     passwordVisible: Boolean,
     showPassword: () -> Unit,
     error: ValidationError?,
-    modifier: Modifier = Modifier,
     color: TextFieldColors = TextFieldDefaults.outlinedTextFieldColors()
 ) {
     OutlinedTextField(
@@ -37,7 +38,7 @@ fun PasswordTextField(
         onValueChange = { text ->
             onPasswordChange(text)
         },
-        label = { Text(text = stringResource(id = R.string.password)) },
+        label = { Text(text = title ?: stringResource(id = R.string.password)) },
         isError = error != null,
         trailingIcon = {
             val image = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
