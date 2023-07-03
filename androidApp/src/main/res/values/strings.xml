@@ -25,4 +25,12 @@
     <string name="campaign_created_by">Created by</string>
     <string name="campaign_verified">Verified since %1$s</string>
     <string name="campaign_count">%1$s more people from %2$s</string>
+    <string name="details">Details</string>
+    <string name="loading_placeholder">Loading...</string>
+    <string name="description">Description</string>
+    <string name="schedule">Schedule</string>
+    <string name="location">Location</string>
+    <string name="participants">Participants</string>
+    <string name="no_participants">Currently there are no participant</string>
+    <string name="join">Join Now</string>
 </resources>

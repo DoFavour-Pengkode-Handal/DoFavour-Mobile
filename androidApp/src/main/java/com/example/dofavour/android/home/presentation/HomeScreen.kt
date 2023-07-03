@@ -23,7 +23,8 @@ import com.example.dofavour.home.presentation.HomeState
 @Composable
 fun HomeScreen(
     state: HomeState,
-    onEvent: (HomeEvent) -> Unit
+    onEvent: (HomeEvent) -> Unit,
+    onCampaignClick: (String) -> Unit
 ) {
     val localGradient = LocalGradient.current
 
@@ -51,7 +52,10 @@ fun HomeScreen(
                 key = { campaign -> campaign.id }
             ) { campaign ->
                 CampaignItem(
-                    campaign = campaign
+                    campaign = campaign,
+                    onClick = {
+                        onCampaignClick(campaign.id)
+                    }
                 )
             }
         }
@@ -64,7 +68,8 @@ private fun HomeScreenPreview() {
     DoFavourTheme {
         HomeScreen(
             state = HomeState(),
-            onEvent = {  }
+            onEvent = {  },
+            onCampaignClick = {  }
         )
     }
 }

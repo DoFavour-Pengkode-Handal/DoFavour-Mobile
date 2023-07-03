@@ -6,5 +6,6 @@ enum class Route {
     Login,
     Register,
     VerifyOtp,
-    ResetPassword
+    ResetPassword,
+    CampaignDetail
 }

@@ -13,6 +13,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.example.dofavour.android.campaign_detail.presentation.AndroidCampaignDetailViewModel
+import com.example.dofavour.android.campaign_detail.presentation.CampaignDetailScreen
 import com.example.dofavour.android.components.DefaultAppBottomBar
 import com.example.dofavour.android.core_ui.navigation.Route
 import com.example.dofavour.android.core_ui.navigation.TopLevelDestination
@@ -202,7 +204,42 @@ fun DoFavour(
 
                 HomeScreen(
                     state = state,
-                    onEvent = viewModel::onEvent
+                    onEvent = viewModel::onEvent,
+                    onCampaignClick = { campaignId ->
+                        navController.navigate(Route.CampaignDetail.name + "/$campaignId")
+                    }
+                )
+            }
+
+            composable(
+                route = Route.CampaignDetail.name + "/{campaign_id}",
+                arguments = listOf(
+                    navArgument("campaign_id") {
+                        type = NavType.StringType
+                    }
+                )
+            ) {
+                val viewModel: AndroidCampaignDetailViewModel = hiltViewModel()
+                val state by viewModel.state.collectAsState()
+
+                LaunchedEffect(key1 = true) {
+                    viewModel.uiEvent.collect { event ->
+                        when(event) {
+                            is UiEvent.Success -> {
+                                appState.showSnackBar("Join Campaign Succeed")
+                            }
+                            is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
+                            else -> Unit
+                        }
+                    }
+                }
+
+                CampaignDetailScreen(
+                    state = state,
+                    onEvent = viewModel::onEvent,
+                    onBackClick = {
+                        navController.navigateUp()
+                    }
                 )
             }
         }

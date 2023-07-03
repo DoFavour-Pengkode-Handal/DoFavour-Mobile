@@ -41,7 +41,8 @@ import com.example.dofavour.home.presentation.HomeDummy
 @Composable
 fun CampaignItem(
     modifier: Modifier = Modifier,
-    campaign: Campaign
+    campaign: Campaign,
+    onClick: () -> Unit
 ) {
     val context = LocalContext.current
     val organization = campaign.organization
@@ -82,7 +83,7 @@ fun CampaignItem(
                         .padding(8.dp),
                     text = stringResource(id = R.string.view),
                     textColor = MaterialTheme.colors.onBackground,
-                    onClick = {  }
+                    onClick = onClick
                 )
             }
 
@@ -219,7 +220,8 @@ fun CampaignItem(
 private fun CampaignItemPreview() {
     DoFavourTheme {
         CampaignItem(
-            campaign = HomeDummy.campaigns[0]
+            campaign = HomeDummy.campaigns[0],
+            onClick = {  }
         )
     }
 }
