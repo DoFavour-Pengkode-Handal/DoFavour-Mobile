@@ -48,7 +48,9 @@ struct CampaignItem: View {
                     Color.clear
                     
                     NavigationLink {
-                        
+                        CampaignDetailScreen(
+                            campaignId: campaign.id
+                        )
                     } label: {
                         Text("View")
                             .font(Font.button)
@@ -92,6 +94,9 @@ struct CampaignItem: View {
                 )
                 .cornerRadius(4)
                 
+                Spacer()
+                    .frame(width: 16)
+                
                 VStack(alignment: .leading) {
                     HStack(spacing: 0) {
                         Text("Created by ")
@@ -106,10 +111,15 @@ struct CampaignItem: View {
             
             HStack {
                 Image(systemName: "calendar")
+                    .resizable()
+                    .scaledToFit()
                     .frame(
                         width: 32,
                         height: 32
                     )
+                
+                Spacer()
+                    .frame(width: 16)
                 
                 HStack(spacing: 0) {
                     Text(campaign.date)
@@ -123,10 +133,15 @@ struct CampaignItem: View {
             
             HStack {
                 Image(systemName: "person.3.fill")
+                    .resizable()
+                    .scaledToFit()
                     .frame(
                         width: 32,
                         height: 32
                     )
+                
+                Spacer()
+                    .frame(width: 16)
                 
                 let value = Float(
                     Double(campaign.volunteerCount) / Double(campaign.limit)

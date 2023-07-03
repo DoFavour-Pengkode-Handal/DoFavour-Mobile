@@ -33,6 +33,9 @@
 		C745E4342A53197900DD5FEB /* CampaignBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4332A53197900DD5FEB /* CampaignBar.swift */; };
 		C745E4362A531D6600DD5FEB /* TopLevelDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4352A531D6600DD5FEB /* TopLevelDestination.swift */; };
 		C745E4382A531E1100DD5FEB /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4372A531E1100DD5FEB /* TabButton.swift */; };
+		C745E43D2A53206A00DD5FEB /* CampaignDetailUseCasesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E43C2A53206A00DD5FEB /* CampaignDetailUseCasesModule.swift */; };
+		C745E43F2A5320A600DD5FEB /* CampaignDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E43E2A5320A600DD5FEB /* CampaignDetailScreen.swift */; };
+		C745E4412A5320AF00DD5FEB /* IosCampaignDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4402A5320AF00DD5FEB /* IosCampaignDetailViewModel.swift */; };
 		C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */; };
 		C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */; };
 		C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */; };
@@ -92,6 +95,9 @@
 		C745E4332A53197900DD5FEB /* CampaignBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignBar.swift; sourceTree = "<group>"; };
 		C745E4352A531D6600DD5FEB /* TopLevelDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLevelDestination.swift; sourceTree = "<group>"; };
 		C745E4372A531E1100DD5FEB /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		C745E43C2A53206A00DD5FEB /* CampaignDetailUseCasesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailUseCasesModule.swift; sourceTree = "<group>"; };
+		C745E43E2A5320A600DD5FEB /* CampaignDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailScreen.swift; sourceTree = "<group>"; };
+		C745E4402A5320AF00DD5FEB /* IosCampaignDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosCampaignDetailViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosRegisterViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLessHeader.swift; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				C745E4392A53204D00DD5FEB /* campaign_detail */,
 				C745E4202A52E02300DD5FEB /* home */,
 				C7BD4D442A2DB40500060DE0 /* Resources */,
 				C7D283E12A22884D00A9718A /* di */,
@@ -268,6 +275,31 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		C745E4392A53204D00DD5FEB /* campaign_detail */ = {
+			isa = PBXGroup;
+			children = (
+				C745E43A2A53205300DD5FEB /* presentation */,
+			);
+			path = campaign_detail;
+			sourceTree = "<group>";
+		};
+		C745E43A2A53205300DD5FEB /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C745E43E2A5320A600DD5FEB /* CampaignDetailScreen.swift */,
+				C745E4402A5320AF00DD5FEB /* IosCampaignDetailViewModel.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		C745E43B2A53205A00DD5FEB /* campaign_detail */ = {
+			isa = PBXGroup;
+			children = (
+				C745E43C2A53206A00DD5FEB /* CampaignDetailUseCasesModule.swift */,
+			);
+			path = campaign_detail;
+			sourceTree = "<group>";
+		};
 		C7BD4D382A2DA7CF00060DE0 /* register */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +385,7 @@
 		C7D283E12A22884D00A9718A /* di */ = {
 			isa = PBXGroup;
 			children = (
+				C745E43B2A53205A00DD5FEB /* campaign_detail */,
 				C745E42E2A52EB5500DD5FEB /* home */,
 				C71907A62A2504DD0099C7D1 /* landing */,
 			);
@@ -499,9 +532,12 @@
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */,
+				C745E43D2A53206A00DD5FEB /* CampaignDetailUseCasesModule.swift in Sources */,
 				C7D283E62A22886800A9718A /* BoardingScreen.swift in Sources */,
 				C745E42D2A52E3A000DD5FEB /* CampaignFilterExtension.swift in Sources */,
 				C71907A32A2504990099C7D1 /* IosLoginViewModel.swift in Sources */,
+				C745E4412A5320AF00DD5FEB /* IosCampaignDetailViewModel.swift in Sources */,
+				C745E43F2A5320A600DD5FEB /* CampaignDetailScreen.swift in Sources */,
 				C7E60C912A4BED2D00C5AB96 /* CommonHeader.swift in Sources */,
 				C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */,
 				C745E4242A52E04000DD5FEB /* HomeScreen.swift in Sources */,

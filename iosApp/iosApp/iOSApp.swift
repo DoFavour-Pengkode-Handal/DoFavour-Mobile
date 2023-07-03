@@ -5,6 +5,7 @@ struct iOSApp: App {
     init() {
         LandingUseCasesModule()
         HomeUseCasesModule()
+        CampaignDetailUseCasesModule()
     }
     
 	var body: some Scene {
