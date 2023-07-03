@@ -3,6 +3,8 @@ package com.example.dofavour.android.di
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKeys
 import com.example.dofavour.android.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -26,5 +28,21 @@ object SharedPreferencesModule {
             BuildConfig.PREF_NAME,
             MODE_PRIVATE
         )
+
+    @Singleton
+    @Provides
+    @Named("encTokenPreferences")
+    fun provideEncPreference(
+        @ApplicationContext context: Context
+    ): SharedPreferences {
+        val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        return EncryptedSharedPreferences.create(
+            BuildConfig.ENCRYPTED_PREF_NAME,
+            masterKeyAlias,
+            context,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+        )
+    }
 
 }

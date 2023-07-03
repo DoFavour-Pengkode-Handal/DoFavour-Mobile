@@ -11,6 +11,11 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		C71363442A533E1B00846CA3 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71363432A533E1B00846CA3 /* KeychainSwift.swift */; };
+		C71363472A533EA300846CA3 /* IosTokenPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71363462A533EA300846CA3 /* IosTokenPreferences.swift */; };
+		C71363492A533F4000846CA3 /* LandingNetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71363482A533F4000846CA3 /* LandingNetworkModule.swift */; };
+		C713634C2A533F7200846CA3 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713634B2A533F7200846CA3 /* AppModule.swift */; };
+		C713634E2A53400700846CA3 /* LandingRepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713634D2A53400700846CA3 /* LandingRepositoryModule.swift */; };
 		C71907A32A2504990099C7D1 /* IosLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907A22A2504990099C7D1 /* IosLoginViewModel.swift */; };
 		C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907A42A2504C00099C7D1 /* LoginScreen.swift */; };
 		C71907A82A2504E80099C7D1 /* LandingUseCasesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71907A72A2504E80099C7D1 /* LandingUseCasesModule.swift */; };
@@ -73,6 +78,11 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C71363432A533E1B00846CA3 /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
+		C71363462A533EA300846CA3 /* IosTokenPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosTokenPreferences.swift; sourceTree = "<group>"; };
+		C71363482A533F4000846CA3 /* LandingNetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingNetworkModule.swift; sourceTree = "<group>"; };
+		C713634B2A533F7200846CA3 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		C713634D2A53400700846CA3 /* LandingRepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRepositoryModule.swift; sourceTree = "<group>"; };
 		C71907A22A2504990099C7D1 /* IosLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosLoginViewModel.swift; sourceTree = "<group>"; };
 		C71907A42A2504C00099C7D1 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		C71907A72A2504E80099C7D1 /* LandingUseCasesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingUseCasesModule.swift; sourceTree = "<group>"; };
@@ -177,10 +187,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C71363452A533E8400846CA3 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C71363462A533EA300846CA3 /* IosTokenPreferences.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		C71907A62A2504DD0099C7D1 /* landing */ = {
 			isa = PBXGroup;
 			children = (
 				C71907A72A2504E80099C7D1 /* LandingUseCasesModule.swift */,
+				C71363482A533F4000846CA3 /* LandingNetworkModule.swift */,
+				C713634D2A53400700846CA3 /* LandingRepositoryModule.swift */,
 			);
 			path = landing;
 			sourceTree = "<group>";
@@ -328,6 +348,7 @@
 		C7D283D52A22850700A9718A /* core */ = {
 			isa = PBXGroup;
 			children = (
+				C71363452A533E8400846CA3 /* data */,
 				C7D283D62A22852500A9718A /* utils */,
 			);
 			path = core;
@@ -338,6 +359,7 @@
 			children = (
 				C7D283D72A22853600A9718A /* DependencyInjector.swift */,
 				C73069AE2A4CBE720013EC5B /* StringExtension.swift */,
+				C71363432A533E1B00846CA3 /* KeychainSwift.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -388,6 +410,7 @@
 				C745E43B2A53205A00DD5FEB /* campaign_detail */,
 				C745E42E2A52EB5500DD5FEB /* home */,
 				C71907A62A2504DD0099C7D1 /* landing */,
+				C713634B2A533F7200846CA3 /* AppModule.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -540,17 +563,21 @@
 				C745E43F2A5320A600DD5FEB /* CampaignDetailScreen.swift in Sources */,
 				C7E60C912A4BED2D00C5AB96 /* CommonHeader.swift in Sources */,
 				C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */,
+				C71363472A533EA300846CA3 /* IosTokenPreferences.swift in Sources */,
 				C745E4242A52E04000DD5FEB /* HomeScreen.swift in Sources */,
 				C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */,
 				C7D283DF2A2287DA00A9718A /* GradientSurface.swift in Sources */,
 				C745E4342A53197900DD5FEB /* CampaignBar.swift in Sources */,
 				C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */,
 				C7D283DD2A22858700A9718A /* Colors.swift in Sources */,
+				C71363492A533F4000846CA3 /* LandingNetworkModule.swift in Sources */,
+				C713634E2A53400700846CA3 /* LandingRepositoryModule.swift in Sources */,
 				C745E4382A531E1100DD5FEB /* TabButton.swift in Sources */,
 				C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */,
 				C73F9C812A4DE03900F1ED66 /* IosResetPasswordViewModel.swift in Sources */,
 				C7D283D82A22853600A9718A /* DependencyInjector.swift in Sources */,
 				C745E4302A52EB5D00DD5FEB /* HomeUseCasesModule.swift in Sources */,
+				C713634C2A533F7200846CA3 /* AppModule.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				C7D283E92A228F4800A9718A /* RoundedCorner.swift in Sources */,
 				C745E4362A531D6600DD5FEB /* TopLevelDestination.swift in Sources */,
@@ -562,6 +589,7 @@
 				C73F9C7F2A4DE01B00F1ED66 /* ResetPasswordScreen.swift in Sources */,
 				C745E42A2A52E2FE00DD5FEB /* CampaignFilterItem.swift in Sources */,
 				C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */,
+				C71363442A533E1B00846CA3 /* KeychainSwift.swift in Sources */,
 				C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */,
 				C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */,
 				C745E4322A53085C00DD5FEB /* CampaignItem.swift in Sources */,

@@ -3,7 +3,9 @@ package com.example.dofavour.landing.presentation.login
 import com.example.ajarin.core.utils.erros.ValidationError
 import com.example.dofavour.core.domain.utils.toCommonFlow
 import com.example.dofavour.core.domain.utils.toCommonStateFlow
+import com.example.dofavour.core.utils.Resource
 import com.example.dofavour.core.utils.UiEvent
+import com.example.dofavour.landing.domain.use_cases.Login
 import com.example.dofavour.landing.domain.use_cases.ValidateEmail
 import com.example.dofavour.landing.domain.use_cases.ValidatePassword
 import kotlinx.coroutines.CoroutineScope
@@ -16,6 +18,7 @@ import kotlinx.coroutines.launch
 class LoginViewModel(
     private val validateEmail: ValidateEmail,
     private val validatePassword: ValidatePassword,
+    private val login: Login,
     coroutineScope: CoroutineScope? = null
 ) {
     private val viewModelScope = coroutineScope ?: CoroutineScope(Dispatchers.Main)
@@ -31,14 +34,25 @@ class LoginViewModel(
     fun onEvent(event: LoginEvent) {
         when(event) {
             LoginEvent.Login -> {
-                _state.value = state.value.copy(
-                    loginSuccess = true
-                )
-
                 viewModelScope.launch {
-                    _uiEvent.send(
-                        UiEvent.Success
+                    val result = login(
+                        email = state.value.email,
+                        password = state.value.password
                     )
+
+                    when(result) {
+                        is Resource.Error -> Unit
+                        is Resource.Loading -> Unit
+                        is Resource.Success -> {
+                            _state.value = state.value.copy(
+                                loginSuccess = true
+                            )
+
+                            _uiEvent.send(
+                                UiEvent.Success
+                            )
+                        }
+                    }
                 }
             }
             is LoginEvent.OnEmailChange -> {
