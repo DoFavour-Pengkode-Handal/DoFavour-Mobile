@@ -23,6 +23,16 @@
 		C73F9C812A4DE03900F1ED66 /* IosResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F9C802A4DE03900F1ED66 /* IosResetPasswordViewModel.swift */; };
 		C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */; };
 		C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */; };
+		C745E4242A52E04000DD5FEB /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4232A52E04000DD5FEB /* HomeScreen.swift */; };
+		C745E4262A52E04800DD5FEB /* IosHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4252A52E04800DD5FEB /* IosHomeViewModel.swift */; };
+		C745E4282A52E0C400DD5FEB /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4272A52E0C400DD5FEB /* HomeHeader.swift */; };
+		C745E42A2A52E2FE00DD5FEB /* CampaignFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4292A52E2FE00DD5FEB /* CampaignFilterItem.swift */; };
+		C745E42D2A52E3A000DD5FEB /* CampaignFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E42C2A52E3A000DD5FEB /* CampaignFilterExtension.swift */; };
+		C745E4302A52EB5D00DD5FEB /* HomeUseCasesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E42F2A52EB5D00DD5FEB /* HomeUseCasesModule.swift */; };
+		C745E4322A53085C00DD5FEB /* CampaignItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4312A53085C00DD5FEB /* CampaignItem.swift */; };
+		C745E4342A53197900DD5FEB /* CampaignBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4332A53197900DD5FEB /* CampaignBar.swift */; };
+		C745E4362A531D6600DD5FEB /* TopLevelDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4352A531D6600DD5FEB /* TopLevelDestination.swift */; };
+		C745E4382A531E1100DD5FEB /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745E4372A531E1100DD5FEB /* TabButton.swift */; };
 		C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */; };
 		C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */; };
 		C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */; };
@@ -72,6 +82,16 @@
 		C73F9C802A4DE03900F1ED66 /* IosResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		C7417F582A4B70BF002538C9 /* VerifyOtpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpScreen.swift; sourceTree = "<group>"; };
 		C7417F5A2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosVerifyOtpViewModel.swift; sourceTree = "<group>"; };
+		C745E4232A52E04000DD5FEB /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C745E4252A52E04800DD5FEB /* IosHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosHomeViewModel.swift; sourceTree = "<group>"; };
+		C745E4272A52E0C400DD5FEB /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		C745E4292A52E2FE00DD5FEB /* CampaignFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignFilterItem.swift; sourceTree = "<group>"; };
+		C745E42C2A52E3A000DD5FEB /* CampaignFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignFilterExtension.swift; sourceTree = "<group>"; };
+		C745E42F2A52EB5D00DD5FEB /* HomeUseCasesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCasesModule.swift; sourceTree = "<group>"; };
+		C745E4312A53085C00DD5FEB /* CampaignItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignItem.swift; sourceTree = "<group>"; };
+		C745E4332A53197900DD5FEB /* CampaignBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignBar.swift; sourceTree = "<group>"; };
+		C745E4352A531D6600DD5FEB /* TopLevelDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLevelDestination.swift; sourceTree = "<group>"; };
+		C745E4372A531E1100DD5FEB /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		C7BD4D3A2A2DA7E100060DE0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		C7BD4D3C2A2DA7EB00060DE0 /* IosRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosRegisterViewModel.swift; sourceTree = "<group>"; };
 		C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLessHeader.swift; sourceTree = "<group>"; };
@@ -128,6 +148,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				C745E4202A52E02300DD5FEB /* home */,
 				C7BD4D442A2DB40500060DE0 /* Resources */,
 				C7D283E12A22884D00A9718A /* di */,
 				C7D283E02A22884200A9718A /* landing */,
@@ -201,6 +222,52 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		C745E4202A52E02300DD5FEB /* home */ = {
+			isa = PBXGroup;
+			children = (
+				C745E4212A52E02D00DD5FEB /* presentation */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		C745E4212A52E02D00DD5FEB /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C745E42B2A52E39600DD5FEB /* helper */,
+				C745E4222A52E03500DD5FEB /* components */,
+				C745E4232A52E04000DD5FEB /* HomeScreen.swift */,
+				C745E4252A52E04800DD5FEB /* IosHomeViewModel.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		C745E4222A52E03500DD5FEB /* components */ = {
+			isa = PBXGroup;
+			children = (
+				C745E4272A52E0C400DD5FEB /* HomeHeader.swift */,
+				C745E4292A52E2FE00DD5FEB /* CampaignFilterItem.swift */,
+				C745E4312A53085C00DD5FEB /* CampaignItem.swift */,
+				C745E4332A53197900DD5FEB /* CampaignBar.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		C745E42B2A52E39600DD5FEB /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				C745E42C2A52E3A000DD5FEB /* CampaignFilterExtension.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		C745E42E2A52EB5500DD5FEB /* home */ = {
+			isa = PBXGroup;
+			children = (
+				C745E42F2A52EB5D00DD5FEB /* HomeUseCasesModule.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		C7BD4D382A2DA7CF00060DE0 /* register */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +319,7 @@
 				C7D283EA2A22922D00A9718A /* RoundedGradientSurface.swift */,
 				C7BD4D3E2A2DAA7400060DE0 /* TitleLessHeader.swift */,
 				C7E60C902A4BED2D00C5AB96 /* CommonHeader.swift */,
+				C745E4372A531E1100DD5FEB /* TabButton.swift */,
 			);
 			path = core_ui;
 			sourceTree = "<group>";
@@ -259,6 +327,7 @@
 		C7D283DA2A22856500A9718A /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				C745E4352A531D6600DD5FEB /* TopLevelDestination.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -284,6 +353,7 @@
 		C7D283E12A22884D00A9718A /* di */ = {
 			isa = PBXGroup;
 			children = (
+				C745E42E2A52EB5500DD5FEB /* home */,
 				C71907A62A2504DD0099C7D1 /* landing */,
 			);
 			path = di;
@@ -430,26 +500,36 @@
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				C7BD4D3D2A2DA7EB00060DE0 /* IosRegisterViewModel.swift in Sources */,
 				C7D283E62A22886800A9718A /* BoardingScreen.swift in Sources */,
+				C745E42D2A52E3A000DD5FEB /* CampaignFilterExtension.swift in Sources */,
 				C71907A32A2504990099C7D1 /* IosLoginViewModel.swift in Sources */,
 				C7E60C912A4BED2D00C5AB96 /* CommonHeader.swift in Sources */,
 				C71907AE2A2505DB0099C7D1 /* DefaultTextField.swift in Sources */,
+				C745E4242A52E04000DD5FEB /* HomeScreen.swift in Sources */,
 				C7BD4D3B2A2DA7E100060DE0 /* RegisterScreen.swift in Sources */,
 				C7D283DF2A2287DA00A9718A /* GradientSurface.swift in Sources */,
+				C745E4342A53197900DD5FEB /* CampaignBar.swift in Sources */,
 				C71907B02A2505F10099C7D1 /* PasswordTextField.swift in Sources */,
 				C7D283DD2A22858700A9718A /* Colors.swift in Sources */,
+				C745E4382A531E1100DD5FEB /* TabButton.swift in Sources */,
 				C7417F5B2A4B70CA002538C9 /* IosVerifyOtpViewModel.swift in Sources */,
 				C73F9C812A4DE03900F1ED66 /* IosResetPasswordViewModel.swift in Sources */,
 				C7D283D82A22853600A9718A /* DependencyInjector.swift in Sources */,
+				C745E4302A52EB5D00DD5FEB /* HomeUseCasesModule.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				C7D283E92A228F4800A9718A /* RoundedCorner.swift in Sources */,
+				C745E4362A531D6600DD5FEB /* TopLevelDestination.swift in Sources */,
 				C7D283F92A22950600A9718A /* Typography.swift in Sources */,
 				C71907AB2A2505420099C7D1 /* LoginHeader.swift in Sources */,
 				C71907A82A2504E80099C7D1 /* LandingUseCasesModule.swift in Sources */,
 				C73069AD2A4CA1730013EC5B /* OtpTextField.swift in Sources */,
+				C745E4262A52E04800DD5FEB /* IosHomeViewModel.swift in Sources */,
 				C73F9C7F2A4DE01B00F1ED66 /* ResetPasswordScreen.swift in Sources */,
+				C745E42A2A52E2FE00DD5FEB /* CampaignFilterItem.swift in Sources */,
 				C71907A52A2504C00099C7D1 /* LoginScreen.swift in Sources */,
 				C7BD4D3F2A2DAA7400060DE0 /* TitleLessHeader.swift in Sources */,
 				C7417F592A4B70BF002538C9 /* VerifyOtpScreen.swift in Sources */,
+				C745E4322A53085C00DD5FEB /* CampaignItem.swift in Sources */,
+				C745E4282A52E0C400DD5FEB /* HomeHeader.swift in Sources */,
 				C73069AF2A4CBE720013EC5B /* StringExtension.swift in Sources */,
 				C7D283EB2A22922D00A9718A /* RoundedGradientSurface.swift in Sources */,
 			);
