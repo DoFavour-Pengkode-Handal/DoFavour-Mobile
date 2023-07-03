@@ -19,4 +19,10 @@
     <string name="resend_count">%1$s Seconds</string>
     <string name="reset_password_title">Reset Password</string>
     <string name="reset_password_textfield_desc">Enter New Password </string>
+    <string name="home_header">Hello,</string>
+    <string name="search_hint">Search...</string>
+    <string name="view">View</string>
+    <string name="campaign_created_by">Created by</string>
+    <string name="campaign_verified">Verified since %1$s</string>
+    <string name="campaign_count">%1$s more people from %2$s</string>
 </resources>

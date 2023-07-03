@@ -9,6 +9,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.dofavour.android.core_ui.navigation.TopLevelDestination
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -29,6 +30,10 @@ class AppState(
 
     val shouldShowBottomBar: Boolean
         @Composable get() = when (currentDestination?.route) {
+            TopLevelDestination.Home.name -> true
+            TopLevelDestination.Post.name -> true
+            TopLevelDestination.History.name -> true
+            TopLevelDestination.Profile.name -> true
             else -> false
         }
 }

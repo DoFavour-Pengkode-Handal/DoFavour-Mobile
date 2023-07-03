@@ -10,4 +10,5 @@ object Colors {
     const val TextBlack = 0xFF111111
     const val Grey = 0XFFD9D9D9
     const val DarkGrey = 0xFF282C31
+    const val GreenBottomBar = 0xFF53A36D
 }

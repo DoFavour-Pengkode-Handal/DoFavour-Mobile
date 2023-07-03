@@ -13,7 +13,11 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.example.dofavour.android.components.DefaultAppBottomBar
 import com.example.dofavour.android.core_ui.navigation.Route
+import com.example.dofavour.android.core_ui.navigation.TopLevelDestination
+import com.example.dofavour.android.home.presentation.AndroidHomeViewModel
+import com.example.dofavour.android.home.presentation.HomeScreen
 import com.example.dofavour.android.landing.presentation.boarding.BoardingScreen
 import com.example.dofavour.android.landing.presentation.login.AndroidLoginViewModel
 import com.example.dofavour.android.landing.presentation.login.LoginScreen
@@ -32,17 +36,30 @@ fun DoFavour(
 ) {
     val scaffoldState = appState.scaffoldState
     val navController = appState.navController
+    val currentDestination = TopLevelDestination.fromRoute(
+        route = appState.currentDestination?.route
+    )
 
     Scaffold(
         modifier = Modifier
             .fillMaxSize(),
-        scaffoldState = scaffoldState
+        scaffoldState = scaffoldState,
+        bottomBar = {
+            if (appState.shouldShowBottomBar) {
+                DefaultAppBottomBar(
+                    currentDestination = currentDestination,
+                    onTabSelected = {
+                        navController.navigate(it.name)
+                    }
+                )
+            }
+        }
     ) { paddingValues ->
         NavHost(
             modifier = Modifier
                 .padding(paddingValues),
             navController = navController,
-            startDestination = Route.Boarding.name
+            startDestination = if (shouldShowOnBoarding) Route.Boarding.name else TopLevelDestination.Home.name
         ) {
             composable(Route.Boarding.name) {
                 BoardingScreen(
@@ -64,6 +81,7 @@ fun DoFavour(
                         when(event) {
                             is UiEvent.Success -> {
                                 appState.showSnackBar("Login Succeed")
+                                navController.navigate(TopLevelDestination.Home.name)
                             }
                             is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
                             else -> Unit
@@ -133,6 +151,7 @@ fun DoFavour(
                         when(event) {
                             is UiEvent.Success -> {
                                 appState.showSnackBar("Verify Otp Succeed")
+                                navController.navigate(TopLevelDestination.Home.name)
                             }
                             is UiEvent.ShowSnackBar -> appState.showSnackBar(event.message)
                             else -> Unit
@@ -174,6 +193,16 @@ fun DoFavour(
                     onBackClick = {
                         navController.navigateUp()
                     }
+                )
+            }
+
+            composable(TopLevelDestination.Home.name) {
+                val viewModel: AndroidHomeViewModel = hiltViewModel()
+                val state by viewModel.state.collectAsState()
+
+                HomeScreen(
+                    state = state,
+                    onEvent = viewModel::onEvent
                 )
             }
         }
